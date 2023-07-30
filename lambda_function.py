@@ -1,7 +1,8 @@
-import pandas as pd
+import json
 
 def lambda_handler(event, context):
-    d = {'col1': [1,2], 'col2': [3,4]}
-    df = pd.DataFrame(data=d)
-    print(df)
+    x = [{"a": 1, "b": 2}, 12345, {"c":6}]
+
+    print(json.dumps(x, indent=4))
+    
     print('Done x1.1')
