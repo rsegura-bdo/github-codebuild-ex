@@ -92,7 +92,7 @@ def editProduct(productId, updateKey, updateValue):
             Key={
                 "productId": productId
             },
-            UpdateExpression=f"set {updateKey}=value",
+            UpdateExpression=f"set {updateKey} = :value",
             ExpressionAttributeValues={
                 ":value": updateValue
             },
