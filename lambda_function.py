@@ -27,7 +27,10 @@ def lambda_handler(event, context):
 
     if path == healthPath:
         if httpMethod == getMethod:
-            response = buildResponse(200)
+            body = {
+                "status": "ok"
+            }
+            response = buildResponse(200, body)
     
     elif path == productPath:
         if httpMethod == getMethod: 
