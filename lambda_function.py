@@ -96,7 +96,7 @@ def editProduct(productId, updateKey, updateValue):
             ExpressionAttributeValues={
                 ":value": updateValue
             },
-            ReturnValues="UPDATE_NEW"
+            ReturnValues="UPDATED_NEW"
         )
 
         body = {
